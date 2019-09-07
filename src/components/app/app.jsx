@@ -40,7 +40,6 @@ export default function App() {
             <Search setNpmToSearch={setNpmToSearch}/>
             { !!code.length && <List
                 code={code}
-                npmToSearch={npmToSearch}
             />}
         </React.Fragment>
 

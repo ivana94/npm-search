@@ -1,8 +1,7 @@
 import React from 'react';
 import './listItem.css';
 
-export default function ListItem({ file, npmToSearch }) {
-    console.log(file);
+export default function ListItem({ file }) {
     return (
         <React.Fragment>
             <a href={ file.url } target="_blank">
@@ -16,7 +15,5 @@ export default function ListItem({ file, npmToSearch }) {
                 </div>
             </a>
         </React.Fragment>
-
     );
-
 };
