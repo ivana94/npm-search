@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.list-item {
+    width: 75vw;
+    height: 15vh;
+    margin: 5vh 0;
+    display: flex;
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+.list-item strong {
+    border-radius: 2px;
+}
+
+.list-item strong:nth-of-type(3) {
+    background: #00f6ff;
+    border-radius: 2px;
+}
+
+.list-item:hover {
+    background: lightgray;
+}
+
+.list-item h3 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.list-item hr {
+    width: 20vw;
+    margin-left: 0vw;
+}
+
+.list-item img {
+    position: relative;
+    left: -1rem;
+    top: -1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem 1rem 0 1rem;
+}

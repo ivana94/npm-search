@@ -38,7 +38,10 @@ export default function App() {
         <React.Fragment>
             <Header />
             <Search setNpmToSearch={setNpmToSearch}/>
-            { !!code.length && <List code={code} />}
+            { !!code.length && <List
+                code={code}
+                npmToSearch={npmToSearch}
+            />}
         </React.Fragment>
 
     );

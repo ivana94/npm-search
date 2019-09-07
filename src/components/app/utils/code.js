@@ -5,6 +5,7 @@ export const filterCodeResultsFromGithub = async (codeArray, setCode) => {
     const results = codeArray.map(repo => {
         repo.data.items.forEach(file => {
             cleanResultFromGithub.push({
+                fileName: file.name,
                 url: file.html_url,
                 repoOwner: file.repository.owner.login,
                 repoName: file.repository.name,
