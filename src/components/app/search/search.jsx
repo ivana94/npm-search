@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './search.css';
 
 /*
 
@@ -15,7 +16,8 @@ export default function Search({ setNpmToSearch }) {
     const [userInput, setUserInput] = useState('');
 
     return (
-        <React.Fragment>
+        <div className='search-container'>
+            <h3>let's figure out <br />how to make this package work.</h3>
             <form onSubmit={ e => {
                 e.preventDefault();
                 setNpmToSearch(userInput);
@@ -28,6 +30,6 @@ export default function Search({ setNpmToSearch }) {
                 />
             <button>submit</button>
             </form>
-        </React.Fragment>
+        </div>
     )
 }

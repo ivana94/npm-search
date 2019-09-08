@@ -2,4 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    float: left;
+}
+
+@media (max-width: 800px) {
+    .list-container {
+        float: none;
+    }
 }

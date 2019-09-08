@@ -1,9 +1,10 @@
 import React from 'react';
+import './header.css';
 
 export default function Header() {
     return (
         <header>
-            <h1>Welcome to NPM search!</h1>
+            <h1>npm search</h1>
         </header>
     )
 }

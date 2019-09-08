@@ -10,6 +10,7 @@ a {
     display: flex;
     border-radius: 0 1rem 1rem 1rem;
     box-shadow: 5px 5px 5px lightgrey;
+    background: white;
 }
 
 .list-item strong {
@@ -22,7 +23,7 @@ a {
 }
 
 .list-item:hover {
-    background: lightgray;
+    background: #ff91fd;
 }
 
 .list-item h3 {
@@ -42,4 +43,28 @@ a {
     width: 4rem;
     height: 4rem;
     border-radius: 1rem 1rem 0 1rem;
+}
+
+.list-item-description {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+@media (max-width: 800px) {
+    .list-item {
+        width: 100%;
+        border-radius: 0;
+        padding: 1rem;
+        margin: 0.1rem 0;
+    }
+
+    .list-item img {
+        display: none;
+    }
+
+    .list-item-description {
+        font-size: 1.1rem;
+    }
 }

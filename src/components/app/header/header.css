@@ -1,0 +1,16 @@
+header {
+    background: #ff91fd;
+    margin: 0;
+    box-shadow: 3px 3px 3px lightgrey;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    text-align: left;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    margin-left: 1rem;
+    letter-spacing: 1px;
+}
