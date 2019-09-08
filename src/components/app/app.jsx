@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './header';
 import Search from './search';
 import List from './list';
+import ErrorMessage from './errorMessage';
 import { getRepos } from './utils/repos';
 import { getCodeFromGithub } from './utils/external/github';
 import './app.css';
@@ -21,16 +22,24 @@ export default function App() {
     const [repos, setRepos] = useState([]);
     const [npmToSearch, setNpmToSearch] = useState('');
     const [code, setCode] = useState([]);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
-        if (!repos.length) {
-            getRepos(repos, setRepos);
-        }
-
-        if (npmToSearch) {
-            const resp = getCodeFromGithub(npmToSearch, repos, setCode);
-        }
-
+        (async () => {
+            if (!repos.length) {
+                const items = await getRepos(repos);
+                setRepos(items);
+            }
+            if (npmToSearch) {
+                try {
+                    const resp = await getCodeFromGithub(npmToSearch, repos, setCode);
+                    setError(false);
+                } catch (err) {
+                    setError(err.response.status);
+                    setCode([]);
+                }
+            }
+        })();
     }, [npmToSearch]);
 
     return (
@@ -41,6 +50,8 @@ export default function App() {
             { !!code.length && <List
                 code={code}
             />}
+
+            { error && <ErrorMessage error={error} />}
         </React.Fragment>
 
     );

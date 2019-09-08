@@ -1,0 +1,10 @@
+.error-container {
+    width: 100%;
+    text-align: center;
+}
+
+.error-container p {
+    font-size: 1.5rem;
+    color: tomato;
+    margin: 5vh 0;
+}
