@@ -1,5 +1,7 @@
 # npm search
 
+[See the live demo here!](https://matijevic-npm.herokuapp.com)
+
 
 ### what is this? how do I use it?
 
