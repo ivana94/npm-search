@@ -21,4 +21,4 @@ export const getCodeFromGithub = async(searchTerm, repos, setCode) => {
         console.log('err in getCodeFromGithub: ', err);
         throw err;
     }
-}
+};

@@ -10,10 +10,10 @@ import './app.css';
 /*
 
     App's job:
-        store in its state the list of links to be rendered, and make all necessary ajax requests to get those links.
+        store in its state the list of links to be rendered, store user's input, and make all necessary ajax requests to get those links.
 
     App's job is NOT:
-        to store user input
+        handle user input. it should simply have the search term the user entered, but not actively collect that input.
 
 */
 
@@ -26,19 +26,25 @@ export default function App() {
 
     useEffect(() => {
         (async () => {
+
+            // first, get repos from github
             if (!repos.length) {
                 const items = await getRepos(repos);
                 setRepos(items);
             }
+
+            // if search term entered, get files from github
             if (npmToSearch) {
                 try {
                     const resp = await getCodeFromGithub(npmToSearch, repos, setCode);
+                    setCode(resp);
                     setError(false);
                 } catch (err) {
                     setError(err.response.status);
                     setCode([]);
                 }
             }
+
         })();
     }, [npmToSearch]);
 
@@ -50,7 +56,6 @@ export default function App() {
             { !!code.length && <List
                 code={code}
             />}
-
             { error && <ErrorMessage error={error} />}
         </React.Fragment>
 

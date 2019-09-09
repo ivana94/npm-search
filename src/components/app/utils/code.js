@@ -13,5 +13,5 @@ export const filterCodeResultsFromGithub = async (codeArray, setCode) => {
             });
         });
     });
-    return setCode(cleanResultFromGithub);
+    return cleanResultFromGithub;
 };
