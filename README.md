@@ -1,7 +1,6 @@
 # npm search
 
-[See the live demo here!](https://matijevic-npm.herokuapp.com)
-
+A simple app for seeing how npm packages are used in the wild!
 
 ### what is this? how do I use it?
 
@@ -11,28 +10,11 @@ This project aimed at trying to find specific files that use an npm package of y
 
 So let's say you want to see how to use `normalize.css`. You can go to this site, enter `normalize.css` into the input field, and you'll see a list of files that use `normalize.css`. Then you can view the files and hopefully one of them gives you a nice example of how to use `normalize.css`!
 
-
 ### tech stack
 
 This project's built with React. Testing done with Jest and Enzyme. All data supplied by the Github's Search API.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). I chose Create React App because I didn't need see a need to configure my own Webpack for this project. I just needed something that would work directly out of the box.
-
-
-
-
-### getting started
-
-1. clone the repo: `git clone https://matijevic@bitbucket.org/matijevic/npm-search.git`
-
-2. run `npm install` or `yarn install` in your Terminal
-
-3. run `npm start` to start up the development server. it should automatically open `localhost:3000` in the browser
-
-4. to run tests, run `npm test` in your Terminal
-
-
-
 
 ### limitations / hardships
 
